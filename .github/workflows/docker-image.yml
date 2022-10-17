@@ -16,7 +16,7 @@ jobs:
       VERSION: 1.16.0
     steps:
       - name: Login to Docker Hub
-        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u jagoanpilot --password-stdin
+        run: echo "${{ DOCKER_PASSWORD }}" | docker login -u jagoanpilot --password-stdin
 
       - name: Checkout project
         uses: actions/checkout@v2
